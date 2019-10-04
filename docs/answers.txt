@@ -1,0 +1,30 @@
+A) Counting objects: 5, done.
+Delta compression using up to 56 threads.
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (4/4), 396 bytes | 0 bytes/s, done.
+Total 4 (delta 1), reused 0 (delta 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/SarahRosenfeld/assignment2.git
+   ab8f03c..8fe1d77  master -> master
+
+B)number of commits: 9
+git command: git rev-list --count HEAD
+
+C) file modification time: Wed Sep 25 18:13:30 2019 -0400
+git command: git log --pretty=format: "%cd" .gitignore
+
+D) Branches are used in a Git repository to allow multiple users to make changes then push them to the master branch without merge errors since their works are in their own separate branches. 
+Another reason they are used is because of the version control, branches store all commits so if a mistake is made it is easy to go back to a previous image of the file.
+
+E)The command "git log" displays all commits that have been made to a branch, git "status" shows all commits on the local machine which have not been pushed.
+
+F) I would use the command "git log Vehicle.h" to see where "Vehicle.h" was one of the committed files.
+
+G) "git log --grep "file"" shows the commits whose commit message uses the word "file".
+
+H)I)Inheritance is when a child class inherits all of the member functions and data of a parent class.
+II) Polymorphism is when an object can take multiple forms. I.E. a programmer can create a list of pointers to a parent class - child classes can be pointed to by this.
+III)Encapsulation is the intertwining of member functions with member data such that functions can be used to change private member data while ensuring the data isn't changed to an invalid value.
+i) The main difference between the two workflows is that "Dictator and Lieutenants" workflow has two separate times that merge conflicts are resolved( lieutenant level where each lieutenant merges their portion of developer pushes, and dictator merges lietenant pushes) before the master whereas the "Integration mananger" workflow only has one merge conflict resolution step before the master.
+
+j)A team of 100 developers would benefit from following the "Dictator and Lieutenants" workflow rather than the "Centralized" workflow because there would be less conflicts to resolve at each merge because less developers are pushing to each inbetween repository in that way than having each of the 100 developers pushing to the same central repository.
