@@ -28,3 +28,7 @@ III)Encapsulation is the intertwining of member functions with member data such 
 i) The main difference between the two workflows is that "Dictator and Lieutenants" workflow has two separate times that merge conflicts are resolved( lieutenant level where each lieutenant merges their portion of developer pushes, and dictator merges lietenant pushes) before the master whereas the "Integration mananger" workflow only has one merge conflict resolution step before the master.
 
 j)A team of 100 developers would benefit from following the "Dictator and Lieutenants" workflow rather than the "Centralized" workflow because there would be less conflicts to resolve at each merge because less developers are pushing to each inbetween repository in that way than having each of the 100 developers pushing to the same central repository.
+
+5) OOP Principles
+
+	Both of these oop properties are utilized in the driving simulator. Polymorphism is used in main.cpp in the Vehicles Array because each spot in the array is simply a pointer to an instance of a  subclass of the vehicle class - aka an instance of a  class which inherits the properties of the vehicle class while adding its own functionality. The simulator also utilizes encapsulation because there are private member data in many of the classes, like the int speedSetting in the scooter class which can only be accesed by helper public member functions.
