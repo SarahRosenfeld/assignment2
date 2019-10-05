@@ -1,4 +1,4 @@
-
+// by Sarah Rosenfeld
 
 #ifndef DRIVINGSIMULATOR_JET_H
 #define DRIVINGSIMULATOR_JET_H

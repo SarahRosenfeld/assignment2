@@ -1,3 +1,5 @@
+// by Sarah Rosenfeld
+
 #ifndef DRIVINGSIMULATOR_SKATEBOARD_H
 #define DRIVINGSIMULATOR_SKATEBOARD_H
 
