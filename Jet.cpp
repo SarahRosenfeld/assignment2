@@ -1,7 +1,17 @@
 #include "Jet.h"
+#include <random>
 
 Jet::Jet(){
-	setNumberOfEngines(1);
+	setEngines(1);
+	setBrand("Custom");
+	setModel("737");
+}
+
+Jet::Jet(string brand, string model, string FuelType, int numberOfEngines){
+	setBrand(brand);
+	setModel(model);
+	setFuelType(fuelType);
+	setEngines(numberOfEngines);
 }
 
 Jet::~Jet() = default;
@@ -18,18 +28,24 @@ void Jet::setEngines(int num){
 	}
 }
 
-double Jet::mileageEstimate(double time){
+double Jet::mileageEstimate(double t){
 	int miles;
 	double mileage;
 
 	srand(time(NULL));
 
 	miles = rand() % 61 + 40;
-	mileage = miles * time;
+	mileage = miles * t;
 
-	if(fueltype == "Rocket" && getNumberOfEngines() > 2){
+	if(fuelType == "Rocket" && getNumberOfEngines() > 2){
 		mileage *= 1.055;
 	}	
 	
 	return mileage;
+}
+
+
+string Jet::toString() {
+    return "-> Jet\n" + PoweredVehicle::toString() + "\n\tNumber of Engines: " +
+          (char) getNumberOfEngines();
 }

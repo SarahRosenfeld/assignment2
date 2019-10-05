@@ -1,5 +1,5 @@
 #include "Skateboard.h"
-#include <stdlib>
+#include <random>
 
 Skateboard::Skateboard(){
 
@@ -12,17 +12,17 @@ Skateboard::Skateboard(string brand, string model){
 
 Skateboard::~Skateboard() = default;
 
-int Skateboard::mileageEstimate(double time){
+double Skateboard::mileageEstimate(double t){
 	double mileage;
 	int random;
 	
-	srand();
+	srand(time(0));
 	random = rand() % 5 + 1;
 
-	mileage = random * 0.1 * time;
+	mileage = random * 0.1 * t;
 
-	if(time > 25 && time < 250){
-		random = rand() % (time/3.0 - 1) + 1;
+	if(t > 25 && t < 250){
+		random = rand() % ((int)t/3 - 1) + 1;
 		mileage += random;  
 	}
 	return floor(mileage);

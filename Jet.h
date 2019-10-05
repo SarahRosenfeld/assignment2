@@ -4,18 +4,19 @@
 #define DRIVINGSIMULATOR_JET_H
 
 #include "PoweredVehicle.h"
-
+#include <random>
 class Jet : public PoweredVehicle{
 	private:
 		int numberOfEngines;
 	public:
-		explicit Jet();
+		Jet();
+		explicit Jet(string brand, string model, string fuelType, int numberOfEngines = 1);
 
 		virtual ~Jet();	
-		int getNumberOfengines();		
+		int getNumberOfEngines();		
 		void setEngines(int numberOfEngines);
 		virtual double mileageEstimate(double time);
-		virtual string tostring();
+		virtual string toString();
 		
 };
 

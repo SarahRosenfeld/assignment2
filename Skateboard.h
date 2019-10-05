@@ -13,7 +13,7 @@ class Skateboard : public Vehicle {
 		
 		virtual ~Skateboard();
 		virtual double mileageEstimate(double time);
-
+		virtual string toString();
 
 };
 
