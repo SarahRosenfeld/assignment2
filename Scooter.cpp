@@ -17,8 +17,8 @@ void Scooter::setSpeedSetting(int speedSetting){
 	speedSetting = speedSetting;
 }
 
-double Scooter::mileageExtimate(double t){
-	double mileage = getSpeedSetting * time;
+double Scooter::mileageEstimate(double t){
+	double mileage = getSpeedSetting() * t;
 	int random;
 	srand(time(0));
 	if (fuelType == "electric"){
@@ -29,6 +29,6 @@ double Scooter::mileageExtimate(double t){
 }
 
 string Scooter::toString(){
-    return "-> Scooter\n" + PoweredVehicle::toString() + "\n\tSpeed setting: " +
-           getSpeedSetting();
+	return "-> Scooter\n" + PoweredVehicle::toString() + "\n\tSpeed setting: " +
+          to_string(speedSetting);
 }

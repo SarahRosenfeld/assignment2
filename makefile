@@ -1,7 +1,7 @@
-main: main.o Vehicle.o PoweredVehicle.o Jet.o Skateboard.o Bicycle.o Car.o
-	g++ -std=c++11 -o main main.o Vehicle.o PoweredVehicle.o Jet.o Skateboard.o Bicycle.o Car.o
+main: main.o Vehicle.o PoweredVehicle.o Jet.o Skateboard.o Scooter.o Bicycle.o Car.o
+	g++ -std=c++11 -o main main.o Vehicle.o PoweredVehicle.o Jet.o Skateboard.o Scooter.o Bicycle.o Car.o
 
-main.o: main.cpp Vehicle.h PoweredVehicle.h Jet.h Skateboard.h Bicycle.h Car.h
+main.o: main.cpp Vehicle.h PoweredVehicle.h Jet.h Skateboard.h Scooter.h Bicycle.h Car.h
 	g++ -std=c++11 -c main.cpp
 
 Vehicle.o: Vehicle.cpp Vehicle.h

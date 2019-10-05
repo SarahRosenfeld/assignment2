@@ -2,12 +2,14 @@
 #include "Car.h"
 #include "Bicycle.h"
 #include "Jet.h"
+#include "Skateboard.h"
+#include "Scooter.h"
 
 void printVehiclesRoster(Vehicle **vehicles, int size);
 
 int main() {
     std::cout << "Driving simulator" << std::endl;
-    int size = 6;
+    int size = 11;
     int capacity = 10;
     Vehicle **vehiclesArray = new Vehicle *[capacity];
 
@@ -17,6 +19,13 @@ int main() {
     vehiclesArray[3] = new Car("Tesla", "T2", "electricity", "large");
     vehiclesArray[4] = new Bicycle("Mizuno", "Wave", 10);
     vehiclesArray[5] = new Car("BMW", "X5", "diesel", "grande");
+    vehiclesArray[6] = new Jet("Delta", "737", "Rocket", 6);
+    vehiclesArray[7] = new Jet("SouthWest", "737", "diesel", 5);
+    vehiclesArray[8] = new Skateboard("Vans", "penny");
+    vehiclesArray[9] = new Scooter("Bird", "original","electric", 7);
+    vehiclesArray[10] = new Scooter("Lime", "original", "gas", 4);
+
+
 
     printVehiclesRoster(vehiclesArray, size);
 
